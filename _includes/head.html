@@ -1,0 +1,30 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="cleartype" content="on">
+	<meta name="MobileOptimized" content="320">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
+
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+	<!-- RSS Feed-->
+	<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
+	<!-- Favicon -->
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+
+	<!-- CSS Style Sheet -->
+	{% if page.title contains 'Anthony Vadala - About' }} %}
+		<link rel="stylesheet" href="{{ "/css/about.css " | prepend: site.baseurl }}">
+	{% else %}
+		<link rel="stylesheet" href="{{ "/css/blog.css " | prepend: site.baseurl }}">
+	{% endif %}
+	</head>

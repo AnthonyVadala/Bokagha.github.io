@@ -1,0 +1,33 @@
+<header class="site-header">
+
+	<!-- Responsive Menu -->
+	<ul class="topnav" id="myTopnav">
+		<li {% if page.title contains 'Anthony Vadala - About' }} %}class="active"{% endif %}>
+			<a href="/" rel="noopener">Home</a>
+		</li>
+		<li {% if page.title contains 'Anthony Vadala - Blog' %}class="active"{% endif %}>
+				<a href="/blog" rel="noopener">Blog</a>
+				</li>
+		<li {% if page.title contains 'Anthony Vadala - Archive' %}class="active"{% endif %}>
+			<a href="/archive" rel="noopener">Archive</a>
+		</li>
+		<li class="icon">
+			<a href="javascript:void(0);" style="font-size:1em;" onclick="menuFunction()">
+				<i class="fas fa-stream" aria-hidden="true"></i>
+			</a>
+		</li>
+	</ul>
+
+	<!-- JS For Responsive Menu -->
+	<script>
+		function menuFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
+	
+</header>

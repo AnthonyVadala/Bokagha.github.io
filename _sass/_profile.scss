@@ -1,0 +1,160 @@
+// Profile General Styling
+// General Styling
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	font-weight: 300;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	font-family: $base-font-family;
+	-webkit-text-size-adjust: 100%;
+	color: $text-color;
+	background-color: $background-color;
+}
+
+// Small Screen Styling
+@media screen and (min-width: 0px) {
+	// Header Text Style
+	#title {
+		font-size: 3em;
+		color: $text-color;
+		text-align: center;
+		padding-top: 15px;
+		padding-bottom: 25px;
+	}
+	#sub-title {
+		font-size: 1.35em;
+		color: $text-color;
+		text-align: center;
+		padding-bottom: 40px;
+	}
+	#background {
+		background-color: $brand-color;
+		padding-top: 50px;
+		margin-bottom: 100px;
+		height: 100px;
+		width: 100%;
+	} // Profile Picture
+	#circular {
+		width: 200px;
+		height: 200px;
+		border-radius: 150px;
+		-webkit-border-radius: 150px;
+		-moz-border-radius: 150px;
+		margin-left: auto;
+		margin-right: auto;
+		border-style: solid;
+		background: url(https://pbs.twimg.com/profile_images/691477576649437184/0rR2InnV_200x200.jpg) no-repeat;
+		border-width: 5px;
+		border-color: $grey-color-light;
+	} // Horizontal List Fix
+	ul {
+		margin: 0 auto;
+		text-align: center;
+		list-style-type: none;
+	} // Button Configuration
+	.buttonList,
+	.buttonList ul {
+		padding: 0;
+		list-style-type: none;
+	}
+	.button {
+		position: relative;
+		margin: 5px 10px;
+		display: inline-block;
+	}
+	.button a {
+		display: inline-block;
+		min-width: 140px;
+		text-decoration: none;
+		font-size: 1.5em;
+		padding: 10px 5px;
+		border-width: 2px;
+		border-style: solid;
+		outline: none;
+		transition: all 1.5s;
+		font-family: $base-font-family;
+		color: $white;
+	}
+	.button ul {
+		position: absolute;
+		box-sizing: border-box;
+		overflow: hidden;
+		width: 100%;
+		max-height: 0;
+		border-width: 0;
+		border-style: solid;
+		z-index: 10;
+		&:hover {
+			max-height: 200px;
+			border-width: 1px;
+			border-style: solid;
+			transition: 1.5s;
+		}
+	}
+	.button ul li {
+		display: block;
+	}
+	.button ul li a {
+		display: inline-block;
+		width: 100%;
+		text-decoration: none;
+		padding: 5px 0;
+		outline: 0;
+		transition: all 1.5s;
+	} // Twitter Button
+	.twitter a,
+	.twitter ul li a {
+		border-color: $twitter-color;
+		background: $twitter-color;
+		&:hover {
+			border-color: $twitter-color;
+			background: $white;
+			color: $twitter-color;
+		}
+	} // GitHub Button
+	.github a,
+	.github ul li a {
+		border-color: $github-color;
+		background: $github-color;
+		&:hover {
+			border-color: $github-color;
+			background: $white;
+			color: $github-color;
+		}
+	} // LinkedIn Button
+	.linkedin a,
+	.linkedin ul li a {
+		border-color: $linkedin-color;
+		background: $linkedin-color;
+		&:hover {
+			border-color: $linkedin-color;
+			background: $white;
+			color: $linkedin-color;
+		}
+	} // Keybase.io Button
+	.keybase a,
+	.keybase ul li a {
+		border-color: $keybase-color;
+		background: $keybase-color;
+		&:hover {
+			border-color: $keybase-color;
+			background: $white;
+			color: $keybase-color;
+		}
+	}
+}
+
+// Desktop Screen Styling
+@media screen and (min-width: 800px) {
+	// Project Container
+	.projectContainer {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+}

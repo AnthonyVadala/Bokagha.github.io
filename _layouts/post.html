@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+{% include head.html %}
+
+<body>
+
+	<!-- Menu -->
+	{% include menu.html %}
+
+	<div class="page-content">
+		<div class="wrapper">
+			<h1 class="post-title">&raquo; {{ page.title }}</h1>
+			<span class="date">{{ page.date | date: '%B %d, %Y' }} | {% include reading-time.html %} read</span>
+			{{ content }}
+		</div>
+	</div>
+
+	<!-- Footer -->
+	{% include footer.html %}
+
+</body>
+
+</html>

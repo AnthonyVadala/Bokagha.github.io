@@ -1,0 +1,96 @@
+---
+# Blog SCSS Template
+---
+
+@charset "utf-8";
+
+// Variables
+$base-font-family: Droid Sans, Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #404040;
+$background-color: #fdfdfd;
+$brand-color:      #29354E;
+$white:            #ffffff;
+
+$menu-hover:       #3f5279;
+
+$grey-color:       #828282;
+$grey-color-light: #e5e5e5;
+
+// Width of the content area
+$content-width:    1000px;
+$on-laptop:        1000px;
+$on-palm:          600px;
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+	@media screen and (max-width: $device) {
+		@content;
+	}
+}
+
+// Import from `_sass` dir
+@import
+	"base",
+	"layout",
+	"menu"
+;
+
+// Date
+.date {
+	color: $grey-color;
+	font-style: italic;
+}
+
+// Layout
+#related {
+	margin-top: 2em;
+}
+
+#related h2 {
+	margin-bottom: 1em;
+}
+
+#related ul,
+ol {
+	margin-left: 10px;
+}
+
+.related_left {
+	float: left;
+	width: 45%;
+}
+
+.related_right {
+	float: right;
+}
+
+.post {
+	margin-bottom: 50px;
+}
+
+ul.posts {
+	list-style-type: none;
+}
+
+ul.posts span {
+	color: $grey-color;
+	font-family: monospace;
+	font-size: 80%;
+}
+
+hr {
+	margin-bottom: 20px;
+}

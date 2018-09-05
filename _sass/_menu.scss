@@ -1,0 +1,129 @@
+// Responsive Menu CSS
+// Active Highlight
+.active {
+	background-color: $menu-hover;
+}
+
+// Menu Icon
+.icon {
+	svg {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		vertical-align: middle;
+		path {
+			fill: $grey-color;
+		}
+	}
+}
+
+// Navigation
+.site-nav {
+	float: right;
+	line-height: 56px;
+	.menu-icon {
+		display: none;
+	}
+	.page-link {
+		color: $text-color;
+		line-height: $base-line-height; // Gaps between nav items, but not on the first one
+		&:not(:first-child) {
+			margin-left: 20px;
+		}
+	}
+	@include media-query($on-palm) {
+		position: absolute;
+		top: 9px;
+		right: 30px;
+		background-color: $background-color;
+		border: 1px solid $grey-color-light;
+		border-radius: 5px;
+		text-align: right;
+		.menu-icon {
+			display: block;
+			float: right;
+			width: 36px;
+			height: 26px;
+			line-height: 0;
+			padding-top: 10px;
+			text-align: center;
+			svg {
+				width: 18px;
+				height: 15px;
+				path {
+					fill: $grey-color-light;
+				}
+			}
+		}
+		.trigger {
+			clear: both;
+			display: none;
+		}
+		&:hover .trigger {
+			display: block;
+			padding-bottom: 5px;
+		}
+		.page-link {
+			display: block;
+			padding: 5px 10px;
+		}
+	}
+}
+
+ul.topnav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: $brand-color;
+}
+
+ul.topnav li {
+	float: left;
+}
+
+ul.topnav li a {
+	display: inline-block;
+	color: $grey-color-light;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	transition: 1.5s;
+	font-size: 17px;
+	&:hover {
+		background-color: $menu-hover;
+	}
+}
+
+ul.topnav li.icon {
+	display: none;
+}
+
+@media screen and (max-width:680px) {
+	ul.topnav li:not(:first-child) {
+		display: none;
+	}
+	ul.topnav li.icon {
+		float: right;
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width:680px) {
+	ul.topnav.responsive {
+		position: relative;
+	}
+	ul.topnav.responsive li.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	ul.topnav.responsive li {
+		float: none;
+		display: inline;
+	}
+	ul.topnav.responsive li a {
+		display: block;
+		text-align: left;
+	}
+}

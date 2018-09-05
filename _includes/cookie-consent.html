@@ -1,0 +1,75 @@
+<style>
+	#cookie-notice {
+		padding: 7px 15px;
+		display: none;
+		text-align: center;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		background: #29354e;
+		color: #e5e5e5;
+	}
+	#cookie-notice a {
+		cursor: pointer;
+		margin-left: 10px;
+		color: #e5e5e5;
+		text-decoration: underline dotted #e5e5e5;
+	}
+	#cookie-notice a:hover{
+		text-decoration: underline #e5e5e5;
+	}
+	@media (max-width: 767px) {
+		#cookie-notice span {
+			display: block;
+			padding-top: 3px;
+			margin-bottom: 13px;
+		}
+		#cookie-notice a {
+			position: relative;
+			bottom: 4px;
+		}
+	}
+</style>
+
+<div id="cookie-notice">
+	<span>This website uses third party cookies, services, and scripts to improve functionality.</span>
+	<a id="cookie-notice-accept">Approve</a> <a href="/thirdparty.html" rel="noopener">What is Being Used?</a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+	function createCookie(name,value,days) {
+		var expires = "";
+		if (days) {
+			var date = new Date();
+			date.setTime(date.getTime() + (days*24*60*60*1000));
+			expires = "; expires=" + date.toUTCString();
+		}
+		document.cookie = name + "=" + value + expires + "; path=/";
+	}
+	function readCookie(name) {
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0;i < ca.length;i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1,c.length);
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+		}
+		return null;
+	}
+	function eraseCookie(name) {
+		createCookie(name,"",-1);
+	}
+
+	if(readCookie('cookie-notice-dismissed')=='true') {
+
+	} else {
+		$('#cookie-notice').show();
+	}
+	$('#cookie-notice-accept').click(function() {
+		createCookie('cookie-notice-dismissed','true',31);
+		$('#cookie-notice').hide();
+	});
+
+</script>

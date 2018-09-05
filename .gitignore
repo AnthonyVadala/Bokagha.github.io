@@ -1,0 +1,9 @@
+# Ignore macOS .DS_Store #
+.DS_Store
+
+# Jekyll Ignore #
+_drafts/
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata

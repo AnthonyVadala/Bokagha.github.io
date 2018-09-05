@@ -1,0 +1,64 @@
+---
+layout: default
+title: Anthony Vadala - Blog
+permalink:
+---
+
+<div id="home">
+
+	<!-- Post Excerpt -->
+	<h1 id="intro"></h1>
+	{% for post in paginator.posts %}
+	<div class="post">
+		<h1 class="post-title">&raquo; <a href="{{ post.url }}" rel="noopener">{{post.title}}</a></h1>
+		<span class="date">{{ post.date | date: '%B %d, %Y' }} - {% include reading-time.html %} read</span>
+		{{ post.excerpt }}
+
+		<!-- Read More Link-->
+		{% if post.excerpt != post.content %}
+		<div align="right">
+			<a href="{{ site.baseurl }}{{ post.url }}">Continue Reading &raquo;</a>
+		</div>
+		{% endif %}
+		<div class="post_break"></div>
+	</div>
+	{% endfor %}
+
+	<!-- Pagination Previous -->
+	{% if paginator.total_pages > 1 %}
+	<div class="pagination"> 
+	{% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" rel="noopener">&laquo; Prev</a>
+	{% else %}
+		<span>&laquo; Prev</span>
+	{% endif %}
+
+	<!-- Pagination Numbers -->
+	{% for page in (1..paginator.total_pages) %}
+		{% if page == paginator.page %}
+		<span class="webjeda">{{ page }}</span>
+		{% endif %}
+	{% endfor %}
+
+	<!-- Pagination Next -->
+	{% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" rel="noopener">Next &raquo;</a>
+	{% else %}
+		<span>Next &raquo;</span>
+	{% endif %}
+	</div>
+	{% endif %}
+
+	<!-- Last 3 Posts
+	<div id="related">
+			<h2>Last 3 Posts</h2>
+			<ul class="posts small">
+				{% for post in site.posts offset:3 limit:3 %}
+				<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	-->
+	
+</div>
