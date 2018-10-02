@@ -33,4 +33,4 @@ excerpt_separator: <!--more-->
 
 `TXT [SUBDOMAIN] DRVTW=[STRING].drv.tw`
 
-10. You can confirm the DNS changes using [G Suite Toolbox](https://toolbox.googleapps.com/apps/dig), check the CNAME and TXT records to confirm your changes propagated
+You can confirm the DNS changes using [G Suite Toolbox](https://toolbox.googleapps.com/apps/dig), check the CNAME and TXT records to confirm your changes propagated
