@@ -6,11 +6,29 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
 
+	<!-- Site Information -->
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+	<!-- Twitter Card -->
+	<meta property="twitter:card" content="summary" />
+	<meta property="twitter:title" content="Anthony Vadala Blog" />
+	<meta property="twitter:description" content="Personal blog for posting random stuff" />
+	<meta property="twitter:site" content="@Anthony_Vadala" />
+	<meta property="twitter:creator" content="@Anthony_Vadala" />
+	<meta property="twitter:img" content="https://pbs.twimg.com/profile_images/691477576649437184/0rR2InnV_400x400.jpg" />
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="Anthony Vadala Blog" />
+	<meta property="og:description" content="Personal blog for posting random stuff" />
+	<meta property="og:url" content="https://anthonyvadala.me/blog/" />
+	<meta property="og:image" content="https://pbs.twimg.com/profile_images/691477576649437184/0rR2InnV_400x400.jpg" />
+	<meta property="og:type" content="website" />
+
+	<!-- Security Headers -->
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"><!-- comment out when testing locally -->
 
 	<!-- RSS Feed-->
 	<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
