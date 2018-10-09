@@ -16,14 +16,14 @@
 	<meta property="twitter:card" content="summary">
 	<meta name="twitter:title" content="{{ page.title }}">
 	<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-	<meta name="twitter:description" content="{{ page.description }}">
+	<meta name="twitter:description" content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
 	<meta property="twitter:site" content="{{ site.twitter_username }}">
 	<meta property="twitter:image" content="https://anthonyvadala.me/images/profile_picture.jpg">
 
 	<!-- Open Graph -->
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="{{ page.title }}">
-	<meta name="og:description" content="{{ page.description }}">
+	<meta name="og:description" content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
 	<meta property="og:url" content="https://anthonyvadala.me/blog/">
 	<meta property="og:image" content="https://anthonyvadala.me/images/profile_picture.jpg">
 
