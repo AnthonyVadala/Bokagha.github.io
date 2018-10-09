@@ -15,13 +15,27 @@
 	<!-- Twitter Card -->
 	<meta property="twitter:card" content="summary" />
 	<meta property="twitter:title" content="Anthony Vadala - {{ page.name }}" />
-	<meta property="twitter:description" content="{{ site.description }}" />
+	{% if page.description %}
+	<meta name="twitter:description"
+		content="{{ page.description }}">
+	{% else %}
+	<meta name="twitter:description"
+		content="{{ page.content | strip_html | xml_escape
+		| truncate: 200 }}">
+	{% endif %}
 	<meta property="twitter:site" content="{{ site.twitter_username }}" />
 	<meta property="twitter:image" content="https://anthonyvadala.me/images/profile_picture.jpg" />
 
 	<!-- Open Graph -->
 	<meta property="og:title" content="Anthony Vadala - {{ page.name }}" />
-	<meta property="og:description" content="{{ site.description }}" />
+	{% if page.description %}
+	<meta name="og:description"
+		content="{{ page.meta_description }}">
+	{% else %}
+	<meta name="og:description"
+		content="{{ page.content | strip_html | xml_escape
+		| truncate: 200 }}">
+	{% endif %}
 	<meta property="og:url" content="https://anthonyvadala.me/blog/" />
 	<meta property="og:image" content="https://anthonyvadala.me/images/profile_picture.jpg" />
 	<meta property="og:type" content="website" />
