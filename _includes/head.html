@@ -20,7 +20,7 @@
 	{% if page.content %}
 	<meta name="twitter:description" content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
 	{% else %}
-	<meta name="twitter:description" content="{{ page.description }}">
+	<meta name="twitter:description" content="{{ site.description }}">
 	{% endif %}
 	<meta property="twitter:image" content="https://anthonyvadala.me/images/profile_picture.jpg">
 
@@ -31,7 +31,7 @@
 	{% if page.content %}
 	<meta property="og:description" content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
 	{% else %}
-	<meta property="og:description" content="{{ page.description }}">
+	<meta property="og:description" content="{{ site.description }}">
 	{% endif %}
 	<meta property="og:image" content="https://anthonyvadala.me/images/profile_picture.jpg">
 
