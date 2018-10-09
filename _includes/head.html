@@ -10,7 +10,7 @@
 	<!-- Site Information -->
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="description" content="{{ site.description }}">
 
 	<!-- Twitter Card -->
 	<meta property="twitter:card" content="summary">
@@ -36,7 +36,7 @@
 	<meta property="og:image" content="https://anthonyvadala.me/images/profile_picture.jpg">
 
 	<!-- Security Headers -->
-	<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> comment out when testing locally -->
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!-- comment out when testing locally -->
 
 	<!-- RSS Feed-->
 	<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
