@@ -13,32 +13,38 @@
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 	<!-- Twitter Card -->
-	<meta property="twitter:card" content="summary" />
-	<meta property="twitter:title" content="Anthony Vadala - {{ page.name }}" />
-	{% if page.description %}
-	<meta name="twitter:description"
-		content="{{ page.description }}">
+	<meta property="twitter:card" content="summary">
+	{% if page.title %}
+	<meta name="twitter:title" content="{{ page.title }}">
 	{% else %}
-	<meta name="twitter:description"
-		content="{{ page.content | strip_html | xml_escape
-		| truncate: 200 }}">
+	<meta name="twitter:title" content="{{ site.title }}">
 	{% endif %}
-	<meta property="twitter:site" content="{{ site.twitter_username }}" />
-	<meta property="twitter:image" content="https://anthonyvadala.me/images/profile_picture.jpg" />
+	{% if page.url %}
+	<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+	{% endif %}
+	{% if page.description %}
+	<meta name="twitter:description" content="{{ page.description }}">
+	{% else %}
+	<meta name="twitter:description" content="{{ site.description }}">
+	{% endif %}
+	<meta property="twitter:site" content="{{ site.twitter_username }}">
+	<meta property="twitter:image" content="https://anthonyvadala.me/images/profile_picture.jpg">
 
 	<!-- Open Graph -->
-	<meta property="og:title" content="Anthony Vadala - {{ page.name }}" />
-	{% if page.description %}
-	<meta name="og:description"
-		content="{{ page.meta_description }}">
+	<meta property="og:type" content="website">
+	<meta property="twitter:card" content="summary">
+	{% if page.title %}
+		<meta property="og:title" content="{{ page.title }}">
 	{% else %}
-	<meta name="og:description"
-		content="{{ page.content | strip_html | xml_escape
-		| truncate: 200 }}">
+		<meta property="og:title" content="{{ site.title }}">
 	{% endif %}
-	<meta property="og:url" content="https://anthonyvadala.me/blog/" />
-	<meta property="og:image" content="https://anthonyvadala.me/images/profile_picture.jpg" />
-	<meta property="og:type" content="website" />
+	{% if page.description %}
+		<meta name="og:description" content="{{ page.meta_description }}">
+	{% else %}
+		<meta name="og:description" content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
+	{% endif %}
+	<meta property="og:url" content="https://anthonyvadala.me/blog/">
+	<meta property="og:image" content="https://anthonyvadala.me/images/profile_picture.jpg">
 
 	<!-- Security Headers -->
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"><!-- comment out when testing locally -->
