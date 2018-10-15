@@ -8,13 +8,11 @@ excerpt_separator: <!--more-->
 To begin, open your terminal and `cd` to your project's directory.
 
 ## Steps
-
 **Check out to a temporary branch**
 
 `git checkout --orphan TEMP_BRANCH`
 
 **Add all files**
-
 `git add -A`
 
 **Commit changes**
