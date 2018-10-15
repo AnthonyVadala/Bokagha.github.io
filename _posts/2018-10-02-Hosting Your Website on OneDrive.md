@@ -22,11 +22,13 @@ excerpt_separator: <!--more-->
 9. Create the following DNS Records (Use the records based on if you are using a Primary Domain or a Subdomain)
 
 **Primary Domain**
+
 `CNAME www [STRING].drv.tw`
 
 `TXT www DRVTW=[STRING].drv.tw`
 
 **Subdomain**
+
 `CNAME [SUBDOMAIN] [STRING].drv.tw`
 
 `TXT [SUBDOMAIN] DRVTW=[STRING].drv.tw`
