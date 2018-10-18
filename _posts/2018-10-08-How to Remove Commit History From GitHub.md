@@ -5,7 +5,7 @@ permalink: /:year/:month/:day/:title/
 excerpt_separator: <!--more-->
 ---
 
-To begin, open your terminal and `cd` to your project's directory.
+To begin, open your terminal and `cd` to your project directory.
 
 ## Steps
 **Check out to a temporary branch**
