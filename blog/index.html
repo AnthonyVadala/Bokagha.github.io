@@ -11,7 +11,7 @@ permalink:
 	{% for post in paginator.posts %}
 	<div class="post">
 		<h1 class="post-title">&raquo; <a href="{{ post.url }}" rel="noopener">{{post.title}}</a></h1>
-		<span class="date">{{ post.date | date: '%B %d, %Y' }} - {% include reading-time.html %} read</span>
+		<span class="date">{{ post.date | date: '%B %d, %Y' }} - {% include reading-time-index.html %} read</span>
 		{{ post.excerpt }}
 
 		<!-- Read More Link-->
