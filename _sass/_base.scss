@@ -257,3 +257,17 @@ pre {
 		padding-left: 0;
 	}
 }
+
+// Keyboard Formatting
+kbd {
+	display: inline-block;
+	margin: 0 .1em;
+	padding: .1em .6em;
+	line-height: 1.4;
+	text-shadow: 0 1px 0 $white;
+	background-color: $grey-color-light;
+	border: 1px solid $grey-color-light;
+	border-radius: 3px;
+	box-shadow: 0 1px 0 $grey-color-light,0 0 0 2px $white inset;
+	white-space: nowrap;
+}
