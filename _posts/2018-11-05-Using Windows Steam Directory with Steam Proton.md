@@ -38,9 +38,11 @@ If you are like me and have a large Steam library and are still switching from W
 ## Fixing the NTFS Read-Only Issue
 The first issue you are going to encounter is not being able to write to the NTFS disk from Linux. You can fix this with one simple command: `ntfsfix`
 
-To use it open your terminal and find the name of your currently mounted NTFS disk by using the `sudo fdisk -l` command. If you are using GNOME Nautilus you can see where the disk is mounted by clicking on  *+ Other Locations*.
-
-If you used the `fdisk` command, you should get an output similar to this:
+In order to use it, you need to know what your NTFS partition is labeled by using:
+```
+sudo fdisk -l
+```
+It should have an output similar to this:
 ```
 ...
 Disk /dev/sda: 3.7 TiB, 4000787030016 bytes, 7814037168 sectors
@@ -56,9 +58,13 @@ Device      Start        End    Sectors  Size Type
 ...
 ```
 
-My Game Disk is labeled `/dev/sda2`, yours may be labeled differently.
+If you are using GNOME Nautilus, you can see what it is labeled by clicking on *Other Locations*.
 
-Now that you know where your disk is mounted, use the `ntfsfix` command:
+*The trailing letter and number (a2) will depend on how many disks are attached.*
+
+My disk partition is labeled `/dev/sda2`.
+
+Now that you know what your disk partition is labeled, use the `ntfsfix` command like this:
 ```
 sudo ntfsfix /dev/sda2
 ```
@@ -69,7 +75,7 @@ We are now going to create a mount point for our game disk:
 sudo mkdir /media/gamedisk
 ```
 
-For the next part, we need to know our User ID and Group ID. You can find them using the following commands:
+For the next part, we need to know our User ID and Group ID. You can find them by using the following commands:
 
 For User ID:
 ```
@@ -82,20 +88,20 @@ id -g
 
 The results for me were `1000` for both the User and Group ID.
 
-Next, we are going to edit our *fstab* file to mount the partition:
+Next, we are going to edit our `/etc/fstab` file to mount the partition:
 ```
 sudo nano /etc/fstab
 ```
-At the bottom of the file, add the following line (changing sda1, uid, and gid to match yours):
+At the bottom of the file, add the following line (changing sda2, uid, and gid to match your results):
 ```
 /dev/sda2 /media/gamedisk ntfs uid=1000,gid=1000,rw,user,exec,umask=000 0 0
 ```
 
 Use the Arrow Keys <kbd>←</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>↓</kbd> to position the Insertion Cursor.
 
-Once again; hit <kbd>CTRL</kbd> + <kbd>X</kbd> to exit, <kbd>Y</kbd> to save, and <kbd>Enter</kbd> to confirm.
+Hit <kbd>CTRL</kbd> + <kbd>X</kbd> to exit, <kbd>Y</kbd> to save, and <kbd>Enter</kbd> to confirm.
 
-We need to reboot the computer for the changes to take affect:
+We need to reboot the computer for the changes to take effect:
 ```
 sudo reboot
 ```
@@ -116,13 +122,13 @@ ln -s ~/.steam/steam/steamapps/compatdata /media/gamedisk/Games/Steam/steamapps/
 ## Enabling Steam Proton
 Open up your Linux version of Steam.
 
-Click on *Steam* -> *Settings* -> *Account*, then select *Change* under Beta participation.
+Click on *Steam* → *Settings* → *Account*, then select *Change* under Beta participation.
 
 From the dropdown menu, select *Steam Beta Update*.
 
-Click *Ok* to confirm, Steam should prompt you to restart for the changes to take affect hit *Restart Now*.
+Click *Ok* to confirm, Steam should prompt you to restart for the changes to take effect hit *Restart Now*.
 
-When Steam launches again, click *Steam* -> *Settings* -> *Steam Play*.
+When Steam launches again, click *Steam* → *Settings* → *Steam Play*.
 
 Make sure there is a check next to:
 
@@ -134,14 +140,14 @@ For the Compatibility tool dropdown, select the latest version of Proton (as of 
 
 *You may want to change this option depending on the game you want to play, some games perform better or worse on a specific version.*
 
-Click *Ok* to confirm, Steam should prompt you to restart for the changes to take affect, click *Restart Now*.
+Click *Ok* to confirm, Steam should prompt you to restart for the changes to take effect, click *Restart Now*.
 
 ## Adding Second Steam Library Path
 Once Proton is enabled you need to add your old Windows Steam library path.
 
-Click on *Steam* -> *Settings* -> *Downloads* -> *STEAM LIBRARY FOLDERS*.
+Click on *Steam* → *Settings* → *Downloads* → *STEAM LIBRARY FOLDERS*.
 
-Click on *Downloads* -> *STEAM LIBRARY FOLDERS*.
+Click on *Downloads* → *STEAM LIBRARY FOLDERS*.
 
 Then *ADD LIBRARY FOLDER*.
 
@@ -149,7 +155,7 @@ Navigate to your Steam folder, my full path is `/media/gamedisk/Games/Steam/`.
 
 Click *Ok* to confirm, then right click on your new library and click *Make Default Folder*.
 
-Click *Ok* again and Steam should prompt you to restart for the changes to take affect, click *Restart Now*.
+Click *Ok* again and Steam should prompt you to restart for the changes to take effect, click *Restart Now*.
 
 When Steam launches again it will start downloading small bits of information for every game in your library, depending on how many games and the specific games, it may take a bit to complete.
 
