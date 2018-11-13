@@ -47,7 +47,8 @@ body {
 		margin-left: auto;
 		margin-right: auto;
 		border-style: solid;
-		background: url(https://pbs.twimg.com/profile_images/691477576649437184/0rR2InnV_200x200.jpg) no-repeat;
+		background: url(/images/profile_picture.jpg) no-repeat;
+		background-size: 200px 200px;
 		border-width: 5px;
 		border-color: $grey-color-light;
 	} // Horizontal List Fix
