@@ -13,3 +13,6 @@ This Site Utilizes the Following:
 - Font Awesome (Vector Icons)
 - Google Fonts (Droid Sans Font)
 - Google Hosted Libraries (jQuery)
+- JSFiddle (Code Examples)
+- GitHub Gist (Code Examples)
+- Dropbox (Image hosting)
