@@ -6,14 +6,14 @@ excerpt_separator: <!--more-->
 ---
 
 ## Introduction
-I sometimes write small PHP web applications that are used on an internal web portal. The problem with the web portal is that it does not support inline PHP, but it does support inline JS and HTML. Using JS and a HTML iframe I display these web applications and make them appear to be a part of the web portal itself!
+Sometimes I write small PHP web applications that are used on an internal web portal. The problem with the web portal is that it does not support inline PHP, but it does support inline JS and HTML. Using a bit of JS and a HTML iframe I display these web applications and make them appear to be a part of the web portal itself!
 
 **Note: This will only work on if the URL in the iframe matches the same domain as the host page it is embedded on.**
 
 ## Getting 100% iframe Height
-The big part of having the iframe integrate seamlessly into the portal is by having the height of it match the height PHP web application, that way I don't need to scroll inside the iframe to view everything.
+The big part of having the iframe integrate seamlessly into the portal is to have the height of it match the height PHP web application, that way I don't need to scroll inside the iframe to view everything.
 
-To calculate the height the iframe should be, I use a bit of JS. The function I use is called calcHeight, which will give me the height in pixels the iframe needs to be.
+To calculate the height the iframe should be, I use a bit of JS with a function called calcHeight. This function will calculate the height in pixels the iframe needs to be.
 
 JS
 ```
@@ -23,7 +23,7 @@ function calcHeight(iframeElement) {
 }
 ```
 
-In order to call the function calcHeight, I need to add an inline event. This event will occur every time something is loaded in the iframe. The onLoad event looks like this: `onLoad="calcHeight(this);"` in my iframe.
+In order to call the function calcHeight, I need to add an inline event. This event will occur every time something is loaded in the iframe and looks like this: `onLoad="calcHeight(this);"` inside the iframe.
 
 I also remove the ability to scroll, since the iframe will be full height anyways using `scrolling="no"`.
 
