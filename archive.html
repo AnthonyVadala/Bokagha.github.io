@@ -10,7 +10,7 @@ permalink: /archive
 
 	<ul class="posts">
 		{% for post in site.posts %}
-		<h1>{% assign currentdate = post.date | date: "%Y" %}</h1>
+			{% assign currentdate = post.date | date: "%Y" %}
 		{% if currentdate != date %}
 			{{ currentdate }}
 			{% assign date = currentdate %}

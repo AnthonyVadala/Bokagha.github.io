@@ -7,7 +7,6 @@ permalink:
 <div id="home">
 
 	<!-- Post Excerpt -->
-	<h1 id="intro"></h1>
 	{% for post in paginator.posts %}
 	<div class="post">
 		<h1 class="post-title">&raquo; <a href="{{ post.url }}" rel="noopener">{{post.title}}</a></h1>
@@ -17,7 +16,7 @@ permalink:
 		<!-- Read More Link-->
 		{% if post.excerpt != post.content %}
 		<div align="right">
-			<a href="{{ site.baseurl }}{{ post.url }}">Continue Reading &raquo;</a>
+			<a href="{{ site.baseurl }}{{ post.url }}">Continue Reading Post &raquo;</a>
 		</div>
 		{% endif %}
 		<div class="post_break"></div>
