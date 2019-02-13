@@ -8,7 +8,7 @@
 					<li>{{ site.title }}</li>
 					<li>
 						<span class="fas fa-envelope" aria-hidden="true"></span>
-						<a href="mailto:{{ site.email }}" target="_blank" accesskey="e">{{ site.email }}</a>
+						<a href="mailto:{{ site.email }}" target="_blank" accesskey="e" data-instant>{{ site.email }}</a>
 					</li>
 				</ul>
 			</div>
@@ -18,14 +18,14 @@
 					{% if site.twitter_username %}
 					<li>
 						<span class="fab fa-twitter" aria-hidden="true"></span>
-						<a href="https://twitter.com/{{ site.twitter_username }}" rel="noopener" target="_blank" accesskey="t">
+						<a href="https://twitter.com/{{ site.twitter_username }}" rel="noopener" target="_blank" accesskey="t" data-instant>
 							<span class="username">Twitter</span>
 						</a>
 					</li>
 					{% endif %} {% if site.github_username %}
 					<li>
 						<span class="fab fa-github" aria-hidden="true"></span>
-						<a href="https://github.com/{{ site.github_username }}" rel="noopener" target="_blank" accesskey="g">
+						<a href="https://github.com/{{ site.github_username }}" rel="noopener" target="_blank" accesskey="g" data-instant>
 							<span class="username">GitHub</span>
 						</a>
 					</li>
@@ -38,14 +38,14 @@
 					{% if site.linkedin_username %}
 					<li>
 						<span class="fab fa-linkedin"></span>
-						<a href="https://linkedin.com/in/{{ site.linkedin_username }}" rel="noopener" target="_blank" accesskey="l">
+						<a href="https://linkedin.com/in/{{ site.linkedin_username }}" rel="noopener" target="_blank" accesskey="l" data-instant>
 							<span class="username">LinkedIn</span>
 						</a>
 					</li>
 					{% endif %} {% if site.keybase_username %}
 					<li>
 						<span class="fab fa-keybase" aria-hidden="true"></span>
-						<a href="https://keybase.io/{{ site.keybase_username }}" rel="noopener" target="_blank" accesskey="k">
+						<a href="https://keybase.io/{{ site.keybase_username }}" rel="noopener" target="_blank" accesskey="k" data-instant>
 							<span class="username">Keybase</span>
 						</a>
 					</li>
