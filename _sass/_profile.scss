@@ -15,6 +15,7 @@ body {
 	background-color: $background-color;
 }
 
+
 // Small Screen Styling
 @media screen and (min-width: 0px) {
 	// Header Text Style
@@ -25,6 +26,7 @@ body {
 		padding-top: 15px;
 		padding-bottom: 25px;
 	}
+
 	#sub-title {
 		font-size: 1.35em;
 		color: $text-color;
@@ -33,13 +35,17 @@ body {
 		padding-left: 1em;
 		padding-right: 1em;
 	}
+
 	#background {
 		background-color: $brand-color;
 		padding-top: 50px;
 		margin-bottom: 100px;
 		height: 100px;
 		width: 100%;
-	} // Profile Picture
+	}
+	
+
+	// Profile Picture
 	#circular {
 		width: 200px;
 		height: 200px;
@@ -53,22 +59,30 @@ body {
 		background-size: 200px 200px;
 		border-width: 5px;
 		border-color: $grey-color-light;
-	} // Horizontal List Fix
+	}
+	
+
+	// Horizontal List Fix
 	ul {
 		margin: 0 auto;
 		text-align: center;
 		list-style-type: none;
-	} // Button Configuration
+	} 
+	
+
+	// Button Configuration
 	.buttonList,
 	.buttonList ul {
 		padding: 0;
 		list-style-type: none;
 	}
+
 	.button {
 		position: relative;
 		margin: 5px 10px;
 		display: inline-block;
 	}
+
 	.button a {
 		display: inline-block;
 		min-width: 140px;
@@ -82,6 +96,7 @@ body {
 		font-family: $base-font-family;
 		color: $white;
 	}
+
 	.button ul {
 		position: absolute;
 		box-sizing: border-box;
@@ -98,9 +113,11 @@ body {
 			transition: 1.5s;
 		}
 	}
+
 	.button ul li {
 		display: block;
 	}
+
 	.button ul li a {
 		display: inline-block;
 		width: 100%;
@@ -108,7 +125,10 @@ body {
 		padding: 5px 0;
 		outline: 0;
 		transition: all 1.5s;
-	} // Twitter Button
+	}
+	
+
+	// Twitter Button
 	.twitter a,
 	.twitter ul li a {
 		border-color: $twitter-color;
@@ -118,7 +138,10 @@ body {
 			background: $white;
 			color: $twitter-color;
 		}
-	} // GitHub Button
+	}
+
+	
+	// GitHub Button
 	.github a,
 	.github ul li a {
 		border-color: $github-color;
@@ -128,7 +151,10 @@ body {
 			background: $white;
 			color: $github-color;
 		}
-	} // LinkedIn Button
+	}
+	
+
+	// LinkedIn Button
 	.linkedin a,
 	.linkedin ul li a {
 		border-color: $linkedin-color;
@@ -138,7 +164,10 @@ body {
 			background: $white;
 			color: $linkedin-color;
 		}
-	} // Keybase.io Button
+	}
+	
+
+	// Keybase.io Button
 	.keybase a,
 	.keybase ul li a {
 		border-color: $keybase-color;
@@ -151,6 +180,7 @@ body {
 	}
 }
 
+
 // Desktop Screen Styling
 @media screen and (min-width: 800px) {
 	// Project Container
@@ -159,5 +189,41 @@ body {
 		padding-bottom: 80px;
 		padding-left: 10%;
 		padding-right: 10%;
+	}
+}
+
+
+// Dark Theme
+@media (prefers-color-scheme: dark) {
+	// General Styling
+	body {
+		color: $text-color-darktheme;
+		background-color: $background-color-darktheme;
+	}
+
+	
+	// Header Text Style
+	#title {
+		color: $text-color-darktheme;
+	}
+
+	#sub-title {
+		color: $text-color-darktheme;
+	}
+
+	#background {
+		background-color: $brand-color;
+	}
+
+
+	// Profile Picture
+	#circular {
+		border-color: $grey-color-light;
+	}
+
+
+	// Button Configuration
+	.button a {
+		color: $white;
 	}
 }

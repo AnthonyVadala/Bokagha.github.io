@@ -12,6 +12,12 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
+// Width of the content area
+$content-width:    1000px;
+$on-laptop:        1000px;
+$on-palm:          600px;
+
+// Default/Light Theme Colors
 $text-color:       #404040;
 $background-color: #fdfdfd;
 $brand-color:      #29354E;
@@ -22,21 +28,15 @@ $menu-hover:       #3f5279;
 $grey-color:       #828282;
 $grey-color-light: #e5e5e5;
 
-$work-color:        #4183C5;
-$education-color:   #D07348;
-$certs-color:       #A03537;
-$skills-color:      #1F7445;
+// Dark Theme Colors
+$text-color-darktheme:       #fdfdfd;
+$background-color-darktheme: #3f5279;
 
+// Media Colors
 $twitter-color:     #1bb2e9;
 $github-color:      #4183c5;
 $linkedin-color:    #007bb6;
 $keybase-color:     #ff6f21;
-
-
-// Width of the content area
-$content-width:    1000px;
-$on-laptop:        1000px;
-$on-palm:          600px;
 
 
 // Using media queries with like this:

@@ -20,6 +20,7 @@ figure {
 	padding: 0;
 }
 
+
 // HTML5 display-role reset for older browsers
 article,
 aside,
@@ -62,6 +63,7 @@ table {
 	border-spacing: 0;
 }
 
+
 // Basic Styling
 html,
 body {
@@ -80,9 +82,11 @@ body {
 	flex-direction: column;
 }
 
+
 strong {
 	font-weight: bold;
 }
+
 
 // Set `margin-bottom` to maintain vertical rhythm
 h1,
@@ -102,6 +106,7 @@ figure,
 	margin-bottom: $spacing-unit / 2;
 }
 
+
 // Lists
 ul,
 ol {
@@ -115,6 +120,7 @@ li {
 	}
 }
 
+
 // Headings
 h1,
 h2,
@@ -124,6 +130,7 @@ h5,
 h6 {
 	font-weight: 300;
 }
+
 
 // Links
 a {
@@ -166,6 +173,7 @@ a {
 	}
 }
 
+
 // Wrapper
 .wrapper {
 	max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -183,6 +191,7 @@ a {
 	}
 }
 
+
 // Clearfix
 %clearfix {
 	&:after {
@@ -191,6 +200,7 @@ a {
 		clear: both;
 	}
 }
+
 
 // Footer
 .site-footer a {
@@ -207,11 +217,13 @@ a {
 	}
 }
 
+
 // Images
 img {
 	max-width: 100%;
 	vertical-align: middle;
 }
+
 
 // Figures
 figure img {
@@ -221,6 +233,7 @@ figure img {
 figcaption {
 	font-size: $small-font-size;
 }
+
 
 // Blockquotes
 blockquote {
@@ -234,6 +247,7 @@ blockquote {
 		margin-bottom: 0;
 	}
 }
+
 
 // Code Formatting
 pre,
@@ -258,6 +272,7 @@ pre {
 	}
 }
 
+
 // Keyboard Formatting
 kbd {
 	display: inline-block;
@@ -270,4 +285,82 @@ kbd {
 	border-radius: 3px;
 	box-shadow: 0 1px 0 $grey-color-light,0 0 0 2px $white inset;
 	white-space: nowrap;
+}
+
+
+// Dark Theme
+@media (prefers-color-scheme: dark) {
+	// Basic Styling
+	body {
+		color: $text-color-darktheme;
+		background-color: $background-color-darktheme;
+	}
+
+
+	// Links
+	a {
+		color: $text-color-darktheme;
+		&:visited {
+			color: $text-color-darktheme;
+		}
+		&:hover {
+			color: $text-color-darktheme;
+		}
+	}
+
+	.wrapper a {
+		text-decoration: underline dotted $text-color-darktheme;
+		&:visited {
+			color: $text-color-darktheme;
+		}
+		&:hover {
+			text-decoration: underline $text-color-darktheme;
+		}
+	}
+	
+	.wrapper .post-title a {
+		color: $text-color-darktheme;
+		&:visited {
+			color: $text-color-darktheme;
+		}
+		&:hover {
+			color: $text-color-darktheme;
+		}
+	}
+
+
+	// Footer
+	.site-footer a {
+		color: $grey-color-light;
+		&:visited {
+			color: $grey-color-light;
+		}
+		&:hover {
+			color: $grey-color-light;
+		}
+	}
+
+
+	// Blockquotes
+	blockquote {
+		color: $grey-color;
+		border-left: 4px solid $grey-color-light;
+	}
+
+
+	// Code Formatting
+	pre,
+	code {
+		border: 1px solid $brand-color;
+		background-color: $brand-color;
+	}
+
+
+	// Keyboard Formatting
+	kbd {
+		text-shadow: 0 1px 0 $white;
+		background-color: $brand-color;
+		border: 1px solid $brand-color;
+		box-shadow: 0 1px 0 $brand-color,0 0 0 2px $white inset;
+	}
 }

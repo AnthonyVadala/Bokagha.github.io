@@ -12,6 +12,12 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
+// Width of the content area
+$content-width:    1000px;
+$on-laptop:        1000px;
+$on-palm:          600px;
+
+// Default/Light Theme Colors
 $text-color:       #404040;
 $background-color: #fdfdfd;
 $brand-color:      #29354E;
@@ -22,10 +28,9 @@ $menu-hover:       #3f5279;
 $grey-color:       #828282;
 $grey-color-light: #e5e5e5;
 
-// Width of the content area
-$content-width:    1000px;
-$on-laptop:        1000px;
-$on-palm:          600px;
+// Dark Theme Colors
+$text-color-darktheme:       #fdfdfd;
+$background-color-darktheme: #3f5279;
 
 
 // Using media queries with like this:
@@ -93,4 +98,18 @@ ul.posts span {
 
 hr {
 	margin-bottom: 20px;
+}
+
+
+// Dark Theme
+@media (prefers-color-scheme: dark) {
+	// Date
+	.date {
+		color: $grey-color-light;
+	}
+
+
+	ul.posts span {
+		color: $grey-color-light;
+	}
 }

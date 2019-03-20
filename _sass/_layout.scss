@@ -12,6 +12,7 @@
 	}
 }
 
+
 // Site Footer
 footer {
 	flex-shrink: 0;
@@ -83,6 +84,7 @@ footer {
 	}
 }
 
+
 // Page Content
 .page-content {
 	padding: $spacing-unit 0;
@@ -115,6 +117,7 @@ footer {
 	display: block;
 	font-size: 24px;
 }
+
 
 // Posts
 .post-header {
@@ -151,6 +154,7 @@ footer {
 		}
 	}
 }
+
 
 // Reset List Style
 .post ol,
@@ -197,5 +201,63 @@ ul {
 }
 
 .post_break {
-	border-bottom: 1px solid #828282;
+	border-bottom: 1px solid $grey-color;
+}
+
+
+// Dark Theme
+@media (prefers-color-scheme: dark) {
+	// Title
+	.site-title {
+		&,
+		&:visited {
+			color: $grey-color-light;
+		}
+	}
+
+
+	// Site Footer
+	.site-footer {
+		border-top: 1px solid $brand-color;
+		background-color: $brand-color;
+	}
+
+	.contact-list,
+	.social-media-list {
+		color: $grey-color-light;
+	}
+
+	.footer-col-wrapper {
+		color: $grey-color;
+	}
+
+
+	// Page Content
+	.post-meta {
+		color: $grey-color;
+	}
+
+
+	// Pagination
+	.pagination a,
+	.pagination span {
+		border: 0px solid $grey-color-light;
+		background-color: $background-color-darktheme;
+	}
+
+	.pagination a {
+		&:hover {
+			background-color: $brand-color;
+			color: $text-color-darktheme;
+		}
+	}
+
+	.webjeda {
+		background-color: $brand-color !important;
+		color: $text-color-darktheme !important;
+	}
+
+	.post_break {
+		border-bottom: 1px solid $grey-color-light;
+	}
 }

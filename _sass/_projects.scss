@@ -1,7 +1,7 @@
 // Profile Projects Section Styling
 // Small Screen Styling
 @media screen and (min-width: 0px) {
-	// Basic Projects Formating
+	// Basic Formating
 	p {
 		line-height: 1.2;
 		margin-left: 15px;
@@ -12,10 +12,12 @@
 	b {
 		font-weight: bold;
 	}
+
 	.content {
 		padding-left: 0%;
 		padding-right: 0%;
 	}
+
 	.section-header {
 		font-size: 1.5em;
 		color: $text-color;
@@ -26,6 +28,7 @@
 		text-align: center;
 		font-family: $base-font-family;
 	}
+
 	.section-pad {
 		padding-left: 10%;
 		padding-right: 3%;
@@ -33,18 +36,27 @@
 		padding-top: 10px;
 		font-size: 1.0em;
 	}
+
 	.job-pad {
 		padding-bottom: 5px;
-	} // List Fix
+	}
+	
+	
+	// List Fix
 	ol {
 		list-style-type: circle;
 	}
+
 	ol li {
 		margin-left: 15px;
-	} // Project Images
+	}
+	
+	
+	// Project Images
 	.img-wrapper {
 		display: block;
 	}
+
 	.img-wrapper img {
 		display: block;
 		width: 100%;
@@ -60,26 +72,28 @@
 			-webkit-transition: opacity 1.0s ease-in-out;
 		}
 	}
+
 	.img-wrapper figcaption {
 		padding-top: 10px;
 		text-align: center;
 	}
+
 	.img-wrapper a {
 		color: $brand-color;
 		text-decoration: none;
 		&:hover {
-			background-color: $background-color;
+			background-color: $grey-color-light;
 			color: $brand-color;
 		}
-	} // Projects Sections Color Styling
+	}
+	
+	
+	// Projects Sections Color Styling
 	.section {
 		background-color: $grey-color-light;
 		height: 100%;
 		width: 100%;
 		text-align: left;
-	}
-	.skills {
-		box-shadow: 10px 0px 0px 0px $skills-color inset;
 	}
 }
 
@@ -90,20 +104,50 @@
 		padding-left: 3%;
 		padding-right: 3%;
 	}
+
 	.section-header {
 		width: 100%;
 		text-align: left;
 		color: $text-color;
 		font-family: $base-font-family;
-	} // Project Images
+	}
+	
+	
+	// Project Images
 	.img-wrapper {
 		display: flex;
 	}
+
 	.img-wrapper img {
 		display: flex;
 		width: 100%;
 		max-width: 480px;
 		height: 300px;
 		align-content: center;
+	}
+}
+
+
+// Dark Theme
+@media (prefers-color-scheme: dark) {
+	// Projects Sections Color Styling
+	.section {
+		background-color: $grey-color-light;
+	}
+
+
+	// Project Images
+	.img-wrapper a {
+		color: $text-color-darktheme;
+		&:hover {
+			background-color: $brand-color;
+			color: $text-color-darktheme;
+		}
+	}
+
+
+	// Basic Formating
+	.section-header {
+		color: $text-color-darktheme;
 	}
 }

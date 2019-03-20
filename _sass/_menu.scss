@@ -4,6 +4,7 @@
 	background-color: $menu-hover;
 }
 
+
 // Menu Icon
 .icon {
 	svg {
@@ -16,6 +17,7 @@
 		}
 	}
 }
+
 
 // Navigation
 .site-nav {
@@ -138,5 +140,61 @@ ul.topnav li.icon {
 	ul.topnav.responsive li a {
 		display: block;
 		text-align: left;
+	}
+}
+
+
+// Dark Theme
+@media (prefers-color-scheme: dark) {
+	// Active Highlight
+	.active {
+		background-color: $menu-hover;
+	}
+
+	
+	// Menu Icon
+	.icon {
+		svg {
+			path {
+				fill: $grey-color;
+			}
+		}
+	}
+
+
+	// Navigation
+	.site-nav {
+		.page-link {
+			color: $text-color-darktheme;
+		}
+		@include media-query($on-palm) {
+			background-color: $background-color-darktheme;
+			border: 1px solid $grey-color-light;
+			.menu-icon {
+				svg {
+					path {
+						fill: $grey-color-light;
+					}
+				}
+			}
+		}
+	}
+
+	ul.topnav {
+		background-color: $brand-color;
+	}
+
+	ul.topnav li a {
+		color: $grey-color-light;
+		&:hover {
+			background-color: $menu-hover;
+		}
+	}
+
+	ul.topnav li div {
+		color: $grey-color-light;
+		&:hover {
+			background-color: $menu-hover;
+		}
 	}
 }
