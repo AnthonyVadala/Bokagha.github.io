@@ -332,6 +332,7 @@ kbd {
 	// Footer
 	.site-footer a {
 		color: $grey-color-light;
+		text-decoration: none;
 		&:visited {
 			color: $grey-color-light;
 		}
