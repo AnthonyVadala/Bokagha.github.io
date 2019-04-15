@@ -152,7 +152,20 @@ body {
 			color: $github-color;
 		}
 	}
-	
+
+
+	// GitLab Button
+	.gitlab a,
+	.gitlab ul li a {
+		border-color: $gitlab-color;
+		background: $gitlab-color;
+		&:hover {
+			border-color: $gitlab-color;
+			background: $white;
+			color: $gitlab-color;
+		}
+	}
+
 
 	// LinkedIn Button
 	.linkedin a,
