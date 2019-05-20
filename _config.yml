@@ -1,7 +1,9 @@
 # Site Settings
 baseurl: "" # The subpath of website, e.g. /blog/
 url: "https://anthonyvadala.me" # The base hostname & protocol for the site
-plugins: [jekyll-paginate] # Include plugins
+plugins: # Include plugins
+  - jekyll-paginate
+  - jekyll-redirect-from
 paginate: 5 # Sets items per page
 paginate_path: /blog/page:num/ # Sets path of pages
 permalink: /404.html # Sets 404 page
