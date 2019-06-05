@@ -1,0 +1,6 @@
+---
+layout: none
+permalink: .well-known/hall-of-fame.txt
+---
+
+None so far!

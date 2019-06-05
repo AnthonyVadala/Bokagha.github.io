@@ -1,3 +1,8 @@
+---
+layout: none
+permalink: .well-known/security.txt
+---
+
 Contact: admin@anthonyvadala.me
 Acknowledgments: https://anthonyvadala.me/.well-known/hall-of-fame.txt
 Preferred-Languages: en
