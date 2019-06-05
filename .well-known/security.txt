@@ -1,0 +1,4 @@
+Contact: admin@anthonyvadala.me
+Acknowledgments: https://anthonyvadala.me/.well-known/hall-of-fame.txt
+Preferred-Languages: en
+Canonical: https://anthonyvadala.me/.well-known/security.txt
