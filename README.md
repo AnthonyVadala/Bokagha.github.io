@@ -10,7 +10,6 @@ This Site Utilizes the Following:
 - Jekyll (Static Website Generation)
 - GitHub Pages (Hosting)
 - instant.page (Preloads Links)
-- Protonmail (Domain Email)
 - Font Awesome (Vector Icons)
 - Google Fonts (Droid Sans Font)
 - Google Hosted Libraries (jQuery)
