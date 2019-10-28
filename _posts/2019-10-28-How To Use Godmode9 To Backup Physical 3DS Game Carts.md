@@ -43,4 +43,4 @@ In order to follow the steps below, you will need to have CFW installed on your 
 - Select `Install and delete CIA` (to save on SD card space)
 - Confirm the installation using <kbd>A</kbd>
 
-**It will take 10-20 minutes to install the file game**
+**It will take 10-20 minutes to install the game file**
