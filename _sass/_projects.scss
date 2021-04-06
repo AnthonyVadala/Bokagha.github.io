@@ -55,10 +55,12 @@
 	// Project Images
 	.img-wrapper {
 		display: block;
+		justify-content: center;
 	}
 
 	.img-wrapper img {
 		display: block;
+		border-radius: 2%;
 		width: 100%;
 		align-content: center;
 		opacity: 0.7;
