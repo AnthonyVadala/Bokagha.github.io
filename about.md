@@ -54,7 +54,7 @@ permalink: /
 		<span class="fas fa-code"></span> Projects
 	</div>
 	<div class="img-wrapper">
-		<a href="https://adamscable.com" rel="noopener" target="_blank">
+		<a href="https://web.archive.org/web/20210418195104/https://www.adamscable.com/" rel="noopener" target="_blank">
 			<figure>
 				<img src="/images/projects/adams_cable_service.png" alt="Picture of Adams Cable Service Website" />
 				<figcaption>Adams Cable Service</figcaption>
